@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#example1{
+    width: auto;
+    padding: 35px;
+    border: 2px solid black;
+    background-image: url("./assets/66541c2f54167b806edcec2f2405b678.jpg");
+   background-size: 100px;
+   background-repeat: no-repeat;
+    color: white;
+}
+#example2{
+    border: 10px solid black;
+  padding: 35px;
+  background: url("./assets/66541c2f54167b806edcec2f2405b678.jpg");
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-origin: border-box;
+}
+#example3 {
+    border: 10px solid black;
+    padding: 35px;
+    background: url("./assets/66541c2f54167b806edcec2f2405b678.jpg");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+  }
+  #grad1 {
+    height: 55px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  }

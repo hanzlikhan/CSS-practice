@@ -1,0 +1,60 @@
+#grad1 {
+    height: 55px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  }
+  #gradd1 {
+    height: 150px;
+    width: 200px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: radial-gradient(red, yellow, green);
+  }
+  
+  #grad2 {
+    height: 150px;
+    width: 200px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: radial-gradient(circle, red, yellow, green);
+  }
+  #grad-1 {
+    height: 150px;
+    width: 150px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+  }
+
+  #grad-11 {
+    height: 150px;
+    width: 150px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+  /* closest-side (first value for move left / right) and (sec value for move top/bottom)  */
+}
+  
+  #grad-2 {
+    height: 150px;
+    width: 150px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);
+  }
+  
+  #grad-22 {
+    height: 150px;
+    width: 150px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: radial-gradient(farthest-side at 10% 15%, red, yellow, black);
+  }
+  
+  #grad-3 {
+    height: 150px;
+    width: 150px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: radial-gradient(closest-corner at 60% 55%, red, yellow, black);
+  }
+  
+  #grad-4 {
+    height: 150px;
+    width: 150px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: radial-gradient(farthest-corner at 60% 55%, red, yellow, black);
+  }
