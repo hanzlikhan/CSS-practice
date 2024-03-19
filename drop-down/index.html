@@ -3,31 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  />
-  <link rel="stylesheet" href="style.css">
+  <title>Hover Dropdown Example</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Show dropdown on hover */
+    .btn-group:hover .dropdown-menu {
+      display: block;
+    }
+    /* Hide the dropdown when hovering on the button */
+    .btn-group:hover .dropdown-toggle {
+      background-color: transparent;
+      color: #212529;
+    }
+    /* Set proper z-index to make sure dropdowns are on top of other elements */
+    .dropdown-menu {
+      z-index: 9999;
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+    }
+    /* Position the little arrow on top of the dropdown box */
+    .dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -8px; /* Adjust the top position as needed */
+      left: 50%;
+      transform: translateX(-50%);
+      border-style: solid;
+      border-width: 0 8px 8px 8px; /* Triangle size */
+      border-color: transparent transparent #dc3545 transparent; /* Triangle color */
+    }
+    /* Position the dropdown toggle icon at the top */
+    .dropdown-toggle::after {
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+  </style>
 </head>
 <body>
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Iasmani Pinazo <span class="glyphicon glyphicon-user pull-right"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Account Settings <span class="fa-solid fa-user pull-right"></span></a></li>
-            <li class="divider"></li>
-            <li><a href="#">User stats <span class="fa-solid fa-chart-simple pull-right"></span></a></li>
-            <li class="divider"></li>
-            <li><a href="#">Messages <span class="fa-regular fa-message pull-right"> 42 </span></a></li>
-            <li class="divider"></li>
-            <li><a href="#">Favourites Snippets <span class="fa-regular fa-heart pull-right"></span></a></li>
-            <li class="divider"></li>
-            <li><a href="#">Sign Out <span class="fa-solid fa-right-from-bracket pull-right"></span></a></li>
-          </ul>
-        </li>
-      </ul>
+<div class="btn-group position-relative">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Action <span class="dropdown-toggle-icon">&#9660;</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+
+<!-- Bootstrap JS (needed for dropdowns) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
